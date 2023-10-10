@@ -110,29 +110,43 @@
 
     .title-course .svg-container {
         position: absolute;
-        top: 40vw;
-        left: 75vw;
+        width: 20vw;
+        height: 20vw;
+        top: 36vw;
+        left: 70vw;
+    }
+
+    .title-course .svg-container svg {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .svg-container span {
+        font-size: 4vw;
+        left: 6vw;
+        top: 8vw;
     }
 }
 
-/* Buy GOod - Do Good Block
+/* Buy Good - Do Good Block
    ========================================================================== */
-
+   
 .buy-good {
     width: 100vw;
     height: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -3vw;
 }
 
 .do-good {
     width: 96vw;
-    height: 2vw;
+    height: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #000;
+    border-bottom: 2px solid #000;
 }
 
 .do-good p {
@@ -140,3 +154,68 @@
     font-family: "Halvetica Now Text";
     font-weight: 400;
 }
+
+/* Products Block
+   ========================================================================== */
+
+.two-good-products {
+    width: 100vw;
+    height: 50vw;
+    margin-top: 1vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}
+
+.products-container {
+    display: flex;
+    width: 96vw;
+    height: 70vw;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products-container .product {
+    overflow: hidden;
+    width: 31vw;
+    height: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.product img {
+    width: 31vw;
+    height: 50vw;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+    .two-good-products {
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .products-container{
+        width: 96vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .products-container .product {
+        width: 100%;
+        margin-bottom: 10px;
+        height: auto;
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
