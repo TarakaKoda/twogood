@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Futura";
+    src: url(../css/fonts/Futura-Bold.woff2);
+}
+
+:root {
+    --background: #F7F7F7;
+    --foreground: #000;
+    --border: #000;
+}
+
+.title-container {
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container h1 {
+    font-family: Futura;
+    font-size: 16vw;
+    text-align: center;
+    font-weight: 500;
+    line-height: 13.6vw;
+    margin-top: 9vw;
+    letter-spacing: -0.8vw;
+}
