@@ -2,6 +2,15 @@
     font-family: "Futura";
     src: url(../css/fonts/Futura-Bold.woff2);
 }
+@font-face {
+    font-family: "Halvetica Now Text";
+    src: url(../css/fonts/../fonts/HelveticaNowText-Regular.woff2);
+    font-weight: 400;
+}
+/* @font-face {
+    font-family: "Halvetica Now Text";
+    src: url(../css/fonts/../fonts/helvetica-now-text-regular-woff-2-4479bd.woff2);
+} */
 
 :root {
     --background: #F7F7F7;
@@ -9,20 +18,125 @@
     --border: #000;
 }
 
+/* main
+   ========================================================================== */
+
+.main {
+    background: var(--background);
+    color: var(--foreground);
+    overflow: hidden;
+}
+
+/* title block
+   ========================================================================== */
+
+.title-course { 
+    position: relative;
+}
+
 .title-container {
     width: 100vw;
-    height:100vh;
+    height: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9vw;
+    position: relative;   
+}
+
+.title-container h1 {
+    font-family: Futura;
+    font-size: 16.3vw;
+    text-align: center;
+    font-weight: 500;
+    line-height: 13.6vw;
+    letter-spacing: -0.8vw;
+}
+
+.title-container .image-container {
+    width: 100vw;
+    height: 30vw;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.title-container h1 {
+.image-container img {
+    width:100vw;
+    height: 100%;
+}
+
+.title-course .svg-container {
+    position: absolute;
+    top: 33.5vw;
+    left: 61vw;
+}
+
+.title-course .svg-container svg {
+    width: 12vw;
+    height: 12vw;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+
+}
+
+.svg-container span {
+    position: absolute;
+    left: 4vw;
+    top: 5vw;
     font-family: Futura;
-    font-size: 16vw;
-    text-align: center;
-    font-weight: 500;
-    line-height: 13.6vw;
-    margin-top: 9vw;
-    letter-spacing: -0.8vw;
+    font-size: 2vw;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .image-container img{
+        height: 95vw;
+        width: 178vw;
+        margin-left: -39vw;
+        margin-top: .5vw;
+    }
+
+    .title-course .svg-container {
+        position: absolute;
+        top: 40vw;
+        left: 75vw;
+    }
+}
+
+/* Buy GOod - Do Good Block
+   ========================================================================== */
+
+.buy-good {
+    width: 100vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.do-good {
+    width: 96vw;
+    height: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.do-good p {
+    font-size: 12px;
+    font-family: "Halvetica Now Text";
+    font-weight: 400;
 }
