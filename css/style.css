@@ -45,7 +45,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 9vw;
+    margin-top: 3vw;
     position: relative;   
     flex-direction: column;
 }
@@ -56,7 +56,7 @@
     text-align: center;
     font-weight: 500;
     line-height: 13.6vw;
-    margin-bottom: -1vw;
+    margin-bottom: -0.7vw;
     letter-spacing: -0.8vw;
 }
 
@@ -84,7 +84,6 @@
     width: 96vw;
     height: 50vw;
     object-fit: cover;
-    border: 1px solid #000;
     align-self: flex-start;
 }
 
@@ -125,12 +124,13 @@
     width:100vw;
     height: 100%;
     position: relative;
+    left: -2vw;
 }
 
 .title-course .svg-container {
     position: absolute;
-    top: 93vw;
-    left: 61vw;
+    top: 53vw;
+    left: 59vw;
 }
 
 .title-course .svg-container svg {
@@ -172,8 +172,8 @@
         position: absolute;
         width: 20vw;
         height: 20vw;
-        top: 96vw;
-        left: 70vw;
+        top: 56vw;
+        left: 68vw;
     }
 
     .title-course .svg-container svg {
@@ -245,6 +245,7 @@
     justify-content: center;
     align-items: center;
     background-color: #000;
+    position: relative;
 }
 
 .product img {
@@ -252,6 +253,135 @@
     height: 50vw;
     object-fit: cover;
 }
+
+.shop-container {
+    width: 230px;
+    height: 50px;
+    background: #E5F0D6;
+    position: absolute;
+    z-index: 1;
+    border-radius: 25px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: .9em;
+    font-size: 12px;
+    font-family: "Halvetica Now Text";
+    font-weight: bold;
+}
+
+.shop-container .dot {
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.shop-pill-title {
+    font-weight: 300;
+}
+
+.shop-container svg {
+    font-weight: bold;
+}
+
+.shop-container-hover {
+    width: 293.6px;
+    height: 50px;
+    background: transparent;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.inner-shop {
+    opacity: 1;
+    width: 100%;
+    height: 0;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #E5F0D6;
+    transition: height  0.25s cubic-bezier(.22,.57,.12,.96);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.inner-shop .inner-left {
+    width: 148px;
+    height: 100%;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner-shop img {
+    margin-top: 20px;
+    width: 120px;
+    height: 0;
+    transition: height 0.25s cubic-bezier(.22,.57,.12,.96);
+}
+
+.inner-shop p {
+    font-family: "Halvetica Now Text";
+    font-size: 0;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    margin-top: -1px;
+    text-align: center;
+    transition: font-size 0.25s cubic-bezier(.22,.57,.12,.96);
+}
+
+.inner-shop .inner-right {
+    width: 148px;
+    height: 100%;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#product2 .shop-container {
+    background: #F5DFCF;
+}
+
+#product2 .inner-shop {
+    background: #F5DFCF;
+}
+#product3 .shop-container {
+    background: #FFFFFF;
+}
+
+#product3 .inner-shop {
+    background: #FFFFFF;
+}
+
+.shop-container-hover:hover .inner-shop{
+    height: 200px;
+}
+
+.shop-container-hover:hover .inner-shop img {
+    height: 112px;
+}
+
+#product1 .shop-container-hover:hover .inner-shop p {
+    font-size: 12px;
+    font-weight: 550;
+}
+.shop-container-hover:hover .inner-shop p {
+    font-size: 14px;
+}
+
 
 @media screen and (max-width: 1024px) {
     .two-good-products {
@@ -268,14 +398,15 @@
 
     .products-container .product {
         width: 100%;
-        margin-bottom: 10px;
+        margin:0 2px 10px;
         height: auto;
     }
 
-    .product img {
+    .product .bg-img {
         width: 100%;
         height: auto;
     }
 }
+
 
 
