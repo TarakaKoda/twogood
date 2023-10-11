@@ -41,12 +41,13 @@
 
 .title-container {
     width: 100vw;
-    height: 30vw;
+    height: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 9vw;
     position: relative;   
+    flex-direction: column;
 }
 
 .title-container h1 {
@@ -55,7 +56,17 @@
     text-align: center;
     font-weight: 500;
     line-height: 13.6vw;
+    margin-bottom: -1vw;
     letter-spacing: -0.8vw;
+}
+
+.title-container .the-course {
+    display: flex;
+    width: 96vw;
+    margin-top: -10vw;
+    margin-bottom: 2vw;
+    justify-content: space-between;
+
 }
 
 .video-container {
@@ -114,12 +125,11 @@
     width:100vw;
     height: 100%;
     position: relative;
-    top: -3vw;
 }
 
 .title-course .svg-container {
     position: absolute;
-    top: 87.5vw;
+    top: 93vw;
     left: 61vw;
 }
 
@@ -162,7 +172,7 @@
         position: absolute;
         width: 20vw;
         height: 20vw;
-        top: 90vw;
+        top: 96vw;
         left: 70vw;
     }
 

@@ -24,3 +24,47 @@ videoCon.addEventListener("mousemove", function(dets) {
 })
 }
 videoConAnimation();
+
+function loadingAnimation() {
+    gsap.from(".title-container .change", {
+        y: 100,
+        opacity: 0,
+        delay: 0.6,
+        duration: 0.4
+    }); 
+    gsap.from(".title-container .the", {
+        y: 100,
+        opacity: 0,
+        delay: 0.8,
+        duration: 0.4
+    }); 
+    gsap.from(".title-container .course", {
+        y: 100,
+        opacity: 0,
+        delay: 1,
+        duration: 0.4
+    });
+
+    gsap.from(".title-course .video-container video", {
+        scale: 0.9,
+        opacity: 0,
+        delay: 1.2,
+        duration: 0.4
+    });
+
+    gsap.from(".image-container img", {
+        y:100,
+        opacity:0,
+        delay: 1.2,
+        duration: 0.4
+    });
+
+    gsap.from(".svg-container", {
+        scale: 0.4,
+        rotate: 360,
+        opacity: 0,
+        delay: 1.4,
+        duration: 0.4
+    })
+}
+loadingAnimation();
