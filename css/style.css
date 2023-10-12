@@ -7,10 +7,10 @@
     src: url(../css/fonts/../fonts/HelveticaNowText-Regular.woff2);
     font-weight: 400;
 }
-/* @font-face {
-    font-family: "Halvetica Now Text";
-    src: url(../css/fonts/../fonts/helvetica-now-text-regular-woff-2-4479bd.woff2);
-} */
+@font-face {
+    font-family: "abc";
+    src: url(../css/fonts/abc-social-mono-regular-woff-2-a87e92.woff2);
+}
 
 :root {
     --background: #F7F7F7;
@@ -217,7 +217,6 @@
 
 /* Products Block
    ========================================================================== */
-
 .two-good-products {
     width: 100vw;
     height: 50vw;
@@ -260,7 +259,7 @@
     background: #E5F0D6;
     position: absolute;
     z-index: 1;
-    border-radius: 25px;
+    border-radius: 23px;
     padding: 0 32px;
     display: flex;
     justify-content: space-between;
@@ -307,7 +306,7 @@
     justify-content: space-between;
     align-items: center;
     background: #E5F0D6;
-    transition: height  0.25s cubic-bezier(.22,.57,.12,.96);
+    transition: height 0.25s cubic-bezier(.22,.57,.12,.96);
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -408,5 +407,174 @@
     }
 }
 
+/* Support Block
+   ========================================================================== */
+
+.support {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    width: 96vw;
+    height: 32vw;
+    margin-left: 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.support-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-self: self-start;
+    width: 52vw;
+}
 
 
+.support-heading h2 {
+    font-size: 3.6vw;
+    font-family: Futura;
+    text-transform: uppercase;
+    line-height: 3.5vw;
+}
+
+.support-content {
+    margin-top: 2vw;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.p-container {
+    width: 24vw;
+    margin-left: -1vw;
+}
+
+.support-content p {
+    margin-bottom: 2.5vw;
+    font-weight: 500;
+    line-height: 1.5vw;
+    font-size: 1.05vw; 
+    font-family: "Halvetica Now Text";
+}
+
+.support-content a {
+    margin-top: .5vw;
+    font-size: .8vw;
+    color: #000;
+    font-family: abc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.support-content .a-container {
+    width: 7.1vw;
+    margin-left: -1vw;
+    height: 5vw;
+    overflow: hidden;
+
+}
+
+.a-container:hover .f-span{
+    animation-name: underline;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+.a-container .f-span {
+    display: inline-block;
+    width: 6.9vw;
+    height: 1px;
+    background: #000;
+    transition: animation 0.1s linear;
+}
+
+@media screen and (max-width: 1024px) {
+    .support {
+        flex-direction: column;
+        width: 96vw;
+        height: auto ;
+        align-items: center;
+        justify-content: center;
+    }
+    .support-heading {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .support-heading h2 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .support-content {
+        margin-top: -20px;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .p-container {
+        width: 100%;
+    }
+
+    .p-container p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .support-content .a-container {
+        width: 105px;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    .a-container a {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .a-container:hover .f-span{
+        animation-name: underline;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    }
+
+    .a-container .f-span {
+        width: 105px;
+        transition: animation 0.1s linear;
+    }
+
+}
+
+@keyframes underline {
+    0% {
+        width: 0px;
+        border-bottom: 0;
+    }
+
+    25% {
+        width: 105px;
+        height: 0px;
+    }
+
+    30% {
+        width: 0;
+        border-bottom: 0;
+        height: 0;
+        position: relative;
+    }
+
+    60% {
+        width: 105px;
+        height: 1px;
+    }
+
+    100% {
+        width: 105px;
+        height: 1px;
+    }
+
+}

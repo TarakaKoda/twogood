@@ -71,10 +71,16 @@ function loadingAnimation() {
         delay: 1.4,
         duration: 0.4
     })
+
+    gsap.from(".product .shop-container", {
+        y:100,
+        opacity: 0,
+        duration: 0.4
+    })
 }
 loadingAnimation();
 
-function scrollTrigger(element, scale, opacity, delay, duration) {
+function scrollTrigger(element, scale, opacity, delay, duration, y) {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -83,7 +89,8 @@ function scrollTrigger(element, scale, opacity, delay, duration) {
               scale,
               opacity,
               delay,
-              duration
+              duration,
+              y
             });
             // Once the animation is triggered, you may want to unobserve the element
             observer.unobserve(entry.target);
