@@ -414,7 +414,7 @@
     margin-top: 2vw;
     margin-bottom: 2vw;
     width: 96vw;
-    height: 32vw;
+    height: 25vw;
     margin-left: 2vw;
     display: flex;
     justify-content: space-between;
@@ -459,7 +459,7 @@
 }
 
 .support-content a {
-    margin-top: .5vw;
+    margin-top: 1vw;
     font-size: .8vw;
     color: #000;
     font-family: abc;
@@ -471,8 +471,6 @@
     width: 7.1vw;
     margin-left: -1vw;
     height: 5vw;
-    overflow: hidden;
-
 }
 
 .a-container:hover .f-span{
@@ -484,9 +482,10 @@
 .a-container .f-span {
     display: inline-block;
     width: 6.9vw;
-    height: 1px;
+    height: .5px;
     background: #000;
-    transition: animation 0.1s linear;
+    margin-bottom: 0.5vw;
+    transition: animation 0.25s cubic-bezier(.22,.57,.12,.96);
 }
 
 @media screen and (max-width: 1024px) {
@@ -544,7 +543,7 @@
 
     .a-container .f-span {
         width: 105px;
-        transition: animation 0.1s linear;
+        transition: animation 0.25s cubic-bezier(.22,.57,.12,.96);
     }
 
 }
@@ -569,12 +568,76 @@
 
     60% {
         width: 105px;
-        height: 1px;
+        height: .5px;
     }
 
     100% {
         width: 105px;
-        height: 1px;
+        height: .5px;
     }
 
 }
+
+/* All Products Block
+   ========================================================================== */
+.grid-2x3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
+    justify-items: center;
+    align-items: center;
+}
+
+.g-products {
+    width: 48vw;
+    height: 48vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.g-products img {
+    width: 45vw;
+    height: 45vw;
+}
+
+.g-products p {
+    font-family: "Halvetica Now Text";
+    font-size: 1vw;
+    opacity: 0.8;
+}
+
+.g-products p:last-of-type {
+    font-size: .8vw;
+    margin-top: -.5vw;
+}
+
+#g-products2 img {
+    height: 41vw;
+}
+
+@media screen and (max-width: 426px) {
+    .g-products p {
+        font-size: 8px;
+        opacity: 1;
+        text-align: center;
+    }
+
+    .g-products p:last-of-type {
+        font-size: 5px;
+    }
+}
+@media screen and (min-width: 427px) and (max-width: 1024px) {
+    .g-products p {
+        font-size: 15px;
+        opacity: 0.8;
+        text-align: center;
+    }
+
+    .g-products p:last-of-type {
+        font-size: 8px;
+    }
+}
+
+
