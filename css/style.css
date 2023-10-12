@@ -213,6 +213,7 @@
     font-size: 12px;
     font-family: "Halvetica Now Text";
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 /* Products Block
@@ -586,6 +587,7 @@
     grid-template-rows: repeat(3, 1fr); 
     justify-items: center;
     align-items: center;
+    position: relative;
 }
 
 .g-products {
@@ -595,6 +597,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .g-products img {
@@ -606,6 +609,7 @@
     font-family: "Halvetica Now Text";
     font-size: 1vw;
     opacity: 0.8;
+    text-transform: uppercase;
 }
 
 .g-products p:last-of-type {
@@ -640,4 +644,45 @@
     }
 }
 
+/* All Products Block
+   ========================================================================== */
+.cursor {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background: #FFEBCD;
+    position: fixed;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+}
 
+.almond {
+    background: #FFEBCD;
+}
+.gray {
+    background: gray;
+}
+.brown {
+    background: #875A31;
+}
+.orange {
+    background: #F03601;
+}
+.red {
+    background: red;
+}
+/* Love and Support Block
+   ========================================================================== */
+.love-support {
+    margin-top: 5vw;
+}
+
+@media screen and (max-width: 426px) {
+    .do-good p {
+        font-size: 8px;
+        font-family: "Halvetica Now Text";
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}

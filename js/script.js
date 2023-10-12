@@ -21,11 +21,11 @@ const scroll = new LocomotiveScroll({
 //         })
 //     })
 
-//     videoCon.addEventListener("mousemove", function(dets) {
-//         gsap.to(playBtn, {
-//             left: dets.x - 45,
-//             top: dets.y - 45,
-//         })
+    // videoCon.addEventListener("mousemove", function(dets) {
+    //     gsap.to(playBtn, {
+    //         left: dets.x - 45,
+    //         top: dets.y - 45,
+    //     })
 //     })
 // }
 // videoConAnimation();
@@ -108,3 +108,32 @@ scrollTrigger("#product1", scale=1.1, opacity=0, delay=0.2, duration=0.4);
 scrollTrigger("#product2", scale=1.1, opacity=0, delay=0.4, duration=0.4);
 scrollTrigger("#product3", scale=1.1, opacity=0, delay=0.6, duration=0.4);
 
+function cursorAnimation(cursorType, element) {
+    document.addEventListener("mousemove", function(dets) {
+        gsap.to(cursorType, {
+            left:dets.x,
+            top:dets.y
+        })
+    })
+    
+    document.querySelector(element).addEventListener("mouseenter", function() {
+        gsap.to(cursorType, {
+            transform: "translate(-50%, -50%) scale(1)",
+            opacity: 0.1,
+        })
+    
+    })
+    
+    document.querySelector(element).addEventListener("mouseleave", function() {
+        gsap.to(cursorType, {
+            transform: "translate(-50%, -50%) scale(0)"
+        })
+    })
+}
+
+cursorAnimation(".cursor.almond","#g-products1");
+cursorAnimation(".cursor.gray","#g-products2");
+cursorAnimation(".cursor.brown","#g-products3");
+cursorAnimation(".cursor.orange","#g-products4");
+cursorAnimation(".cursor.orange","#g-products5");
+cursorAnimation(".cursor.red","#g-products6");
