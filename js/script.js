@@ -132,6 +132,8 @@ scrollTrigger(element=".line-2", scale=1, opacity=0, delay=0.3, duration=0.2, y=
 scrollTrigger(element=".line-3", scale=1, opacity=0, delay=0.4, duration=0.2, y=100)
 scrollTrigger(element=".line-4", scale=1, opacity=0, delay=0.5, duration=0.2, y=100)
 scrollTrigger(element=".line-5", scale=1, opacity=0, delay=0.6, duration=0.2, y=100)
+scrollTrigger(element=".impact-img1", scale=1.1, opacity=0, delay=0.2, duration=0.4, y=100)
+scrollTrigger(element=".impact-img2", scale=1.1, opacity=0, delay=0.3, duration=0.4, y=100)
 
 function cursorAnimation(cursorType, element) {
     document.addEventListener("mousemove", function(dets) {

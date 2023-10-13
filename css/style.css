@@ -865,7 +865,7 @@ scroll-behavior: auto;
     opacity: 0.8;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 426px) {
     .send-message {
         width: 100vw;
         margin-top: 20vw;
@@ -884,6 +884,146 @@ scroll-behavior: auto;
         font-size: 5vw;
         margin: 30px;
         opacity: 0.9;
+    }
+
+}
+
+@media screen and (min-width: 427px) and (max-width: 1024px) {
+    .send-message {
+        width: 100vw;
+        margin-top: 20vw;
+    }
+
+    .send-message .message-btn {
+        width: 50vw;
+        height: 10vw
+    }
+
+    .message-btn h4 {
+        font-size: 2vw;
+    }
+
+    .send-message p {
+        font-size: 2.5vw;
+        margin: 30px;
+        opacity: 0.9;
+    }
+}
+
+/* Impact Block
+   ========================================================================== */
+.our-impact {
+    width: 100vw;
+    height: 50vw;
+    margin-top: 1vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    top: 10vw;
+    margin-bottom: 30vw;
+}
+
+.impact-container {
+    display: flex;
+    width: 96vw;
+    height: 70vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our-impact .support-content {
+    align-self: flex-start;
+    margin-top: 11vw;
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.our-impact h3 {
+    font-size: 2vw;
+    font-family: Futura;
+    margin-left: -1vw;
+}
+
+.our-impact .a-container {
+    width: 10vw;
+}
+
+.our-impact .f-span {
+    width: 130px;
+}
+
+@media screen and (max-width: 1024px) {
+    .our-impact {
+        height: 250vw;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 2vw;
+    }
+
+    .grid-2x1 {
+        height: 40vw;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "impact-image-left impact-image-right"
+        "impact-content impact-content";
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        align-content: flex-start;
+        align-self: self-start;
+        margin-right: 4vw
+    }
+
+    .impact-img1 {
+        grid-area: impact-image-left;
+    }
+
+    .impact-img1 img {
+        width: 45vw;
+        height: 100%;
+
+    }
+    .impact-img2 img {
+        width: 45vw;
+        height: 100%;
+    }
+
+    .impact-img2 {
+        grid-area: impact-image-right;
+    }
+
+    .impact-container .impact-content{
+        grid-area: impact-content;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        justify-content: flex-start;
+        margin-left: 5vw;
+    }
+
+    .our-impact h3 {
+        font-size: 5vw;
+        font-family: Futura;
+        margin-left: -1vw;
+    }
+
+    .our-impact p {
+        text-align: left;
+    }
+
+    .our-impact .a-container {
+        width: 50vw;
+    }
+    
+    .our-impact .f-span {
+        width: 130px;
+        display: block;
     }
 
 }
