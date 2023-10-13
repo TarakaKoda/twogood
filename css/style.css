@@ -623,24 +623,53 @@
 
 @media screen and (max-width: 426px) {
     .g-products p {
-        font-size: 8px;
+        font-size: 12px;
+        height: 8vw;
         opacity: 1;
+        font-weight: bold;
         text-align: center;
     }
 
     .g-products p:last-of-type {
-        font-size: 5px;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    #g-products1 {
+        margin-bottom: 10px;
+    }
+    #g-products2 p {
+        margin-bottom: 20px;
+    }
+    #g-products4 p{
+        margin-bottom: -10px;
+    }
+    #g-products6 p {
+        margin-bottom: -10px;
+    }
+    #g-products6 p:last-of-type {
+        margin-top: 20px
     }
 }
 @media screen and (min-width: 427px) and (max-width: 1024px) {
+    .g-products {
+        margin-top: 10px;
+    }
+
     .g-products p {
         font-size: 15px;
+        height: 8vw;
         opacity: 0.8;
         text-align: center;
+        font-weight: 600;
     }
 
     .g-products p:last-of-type {
-        font-size: 8px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    #g-products1 {
+        margin-bottom: 10px;
     }
 }
 
@@ -680,13 +709,24 @@
 
 @media screen and (max-width: 426px) {
     .do-good p {
-        font-size: 8px;
+        font-size: 9px;
         font-family: "Halvetica Now Text";
         font-weight: 400;
         text-transform: uppercase;
     }
 }
 
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+    .do-good p {
+        font-size: 10px;
+        font-family: "Halvetica Now Text";
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+}
+
+/* Scroll Button Block
+   ========================================================================== */
 
 .scroll-buttons-container {
     height: 16vw;
@@ -717,7 +757,7 @@
     width: 1vw;
     height: 1vw;
     border: 1px solid #000;
-    border-radius: 50%;
+    border-radius: .5vw;
 }
 
 .reset-button span {
@@ -744,17 +784,106 @@ scroll-behavior: auto;
     opacity: 0.6;
 }
 
-form {
+.rotated-svg {
+    transform: rotateX(180deg);
+}
+
+.underline-container {
+    width: 0;
+    overflow: hidden;
+}
+
+@media screen and (max-width:1024px) {
+    .scroll-buttons-container {
+        height: 150px;
+    }
+
+    .reset-button {
+        height: 130px;
+        width: 130px;
+    }
+    .reset-button .circle{
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+    }
+    .reset-button span {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+/* Hidden Content Block
+   ========================================================================== */
+.hidden-container {
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    font-family: Futura;
+    text-align: center;
+    font-size: 3vw;
+    line-height: 1vw;
 }
 
-form input {
-    height: 2vw;
-    width: 2vw;
-
+@media screen and (max-width: 1024px) {
+    .hidden-container {
+        font-size: 3.6vw;
+    }
 }
 
-input[type="radio"]:checked {
-    background-color: #000;
+/* Send message Block
+   ========================================================================== */
+.send-message {
+    margin-top: -2vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 20vw;
+}
+
+.message-btn {
+    margin-top: -1vw;
+    width: 22vw;
+    display: flex;
+    background: #000;
+    border-radius: 10vw;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 4vw;
+}
+
+.message-btn h4 {
+    font-size: .8vw;
+    font-family: "Halvetica Now Text";
+}
+
+.send-message p {
+    font-family: "Halvetica Now Text";
+    font-size: 1.1vw;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1024px) {
+    .send-message {
+        width: 100vw;
+        margin-top: 20vw;
+    }
+
+    .send-message .message-btn {
+        width: 90vw;
+        height: 10vw
+    }
+
+    .message-btn h4 {
+        font-size: 4vw;
+    }
+
+    .send-message p {
+        font-size: 5vw;
+        margin: 30px;
+        opacity: 0.9;
+    }
+
 }

@@ -77,10 +77,23 @@ function loadingAnimation() {
         opacity: 0,
         duration: 0.4
     })
+
+    gsap.from(".do-good", {
+      opacity: 0,
+      width: 0,
+      delay: 1.2,
+      duration: 0.4,
+    });
+    gsap.from("#product1", {
+      opacity: 0,
+      y:100,
+      delay: 1.6,
+      duration: 0.4,
+    });
 }
 loadingAnimation();
 
-function scrollTrigger(element, scale, opacity, delay, duration, y) {
+function scrollTrigger(element, scale, opacity, delay, duration, y, width) {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -90,7 +103,8 @@ function scrollTrigger(element, scale, opacity, delay, duration, y) {
               opacity,
               delay,
               duration,
-              y
+              y,
+              width
             });
             // Once the animation is triggered, you may want to unobserve the element
             observer.unobserve(entry.target);
@@ -103,7 +117,6 @@ function scrollTrigger(element, scale, opacity, delay, duration, y) {
     observer.observe(elementToObserve);
     }
 }
-
 scrollTrigger("#product1", scale=1.1, opacity=0, delay=0.2, duration=0.4);
 scrollTrigger("#product2", scale=1.1, opacity=0, delay=0.4, duration=0.4);
 scrollTrigger("#product3", scale=1.1, opacity=0, delay=0.6, duration=0.4);
@@ -113,7 +126,12 @@ scrollTrigger("#g-products3", scale=1.1, opacity=0, delay=0.6, duration=0.4);
 scrollTrigger("#g-products4", scale=1.1, opacity=0, delay=0.8, duration=0.4);
 scrollTrigger("#g-products5", scale=1.1, opacity=0, delay=0.6, duration=0.4);
 scrollTrigger("#g-products6", scale=1.1, opacity=0, delay=0.8, duration=0.4);
-
+scrollTrigger(".buy-good.love-support", scale=1.1, opacity=0, delay=0.4, duration=0.5, width=0);
+scrollTrigger(element=".line-1", scale=1, opacity=0, delay=0.2, duration=0.2, y=100)
+scrollTrigger(element=".line-2", scale=1, opacity=0, delay=0.3, duration=0.2, y=100)
+scrollTrigger(element=".line-3", scale=1, opacity=0, delay=0.4, duration=0.2, y=100)
+scrollTrigger(element=".line-4", scale=1, opacity=0, delay=0.5, duration=0.2, y=100)
+scrollTrigger(element=".line-5", scale=1, opacity=0, delay=0.6, duration=0.2, y=100)
 
 function cursorAnimation(cursorType, element) {
     document.addEventListener("mousemove", function(dets) {
@@ -220,5 +238,35 @@ function resetButtonAnimation() {
 }
 
 resetButtonAnimation();
+
+function UnderlineAnimation() {
+  const buttons = document.querySelectorAll('.button-container button');
+  const underlines = document.querySelectorAll('.underline-container')
+
+  let currentActiveButton = null;
+
+  buttons.forEach((button, index) => {
+    button.addEventListener('mousedown', () => {
+      const underline = underlines[index];
+      if (currentActiveButton !== button) {
+        if (currentActiveButton) {
+          const previousIndex = Array.from(buttons).indexOf(currentActiveButton);
+          const previousActiveUnderline = underlines[previousIndex];
+          gsap.to(previousActiveUnderline, {
+            width:0,
+            overflow:"hidden"
+          });
+        }
+        gsap.to(underline, {
+          width:"auto",
+          overflow: "normal"
+        });
+        currentActiveButton = button;
+      }
+    });
+  });
+}
+UnderlineAnimation();
+
 
 
