@@ -107,6 +107,13 @@ function scrollTrigger(element, scale, opacity, delay, duration, y) {
 scrollTrigger("#product1", scale=1.1, opacity=0, delay=0.2, duration=0.4);
 scrollTrigger("#product2", scale=1.1, opacity=0, delay=0.4, duration=0.4);
 scrollTrigger("#product3", scale=1.1, opacity=0, delay=0.6, duration=0.4);
+scrollTrigger("#g-products1", scale=1.1, opacity=0, delay=0.6, duration=0.4);
+scrollTrigger("#g-products2", scale=1.1, opacity=0, delay=0.8, duration=0.4);
+scrollTrigger("#g-products3", scale=1.1, opacity=0, delay=0.6, duration=0.4);
+scrollTrigger("#g-products4", scale=1.1, opacity=0, delay=0.8, duration=0.4);
+scrollTrigger("#g-products5", scale=1.1, opacity=0, delay=0.6, duration=0.4);
+scrollTrigger("#g-products6", scale=1.1, opacity=0, delay=0.8, duration=0.4);
+
 
 function cursorAnimation(cursorType, element) {
     document.addEventListener("mousemove", function(dets) {
@@ -137,3 +144,81 @@ cursorAnimation(".cursor.brown","#g-products3");
 cursorAnimation(".cursor.orange","#g-products4");
 cursorAnimation(".cursor.orange","#g-products5");
 cursorAnimation(".cursor.red","#g-products6");
+
+const buttonContainer = document.querySelector('.button-container');
+
+let isScrolling = false;
+let startX;
+let scrollLeft;
+
+buttonContainer.addEventListener('mousedown', (e) => {
+  isScrolling = true;
+  startX = e.pageX - buttonContainer.offsetLeft;
+  scrollLeft = buttonContainer.scrollLeft;
+});
+
+buttonContainer.addEventListener('mouseleave', () => {
+  isScrolling = false;
+});
+
+buttonContainer.addEventListener('mouseup', () => {
+  isScrolling = false;
+});
+
+buttonContainer.addEventListener('mousemove', (e) => {
+  if (!isScrolling) return;
+  e.preventDefault();
+  const x = e.pageX - buttonContainer.offsetLeft;
+  const walk = (x - startX) * 2;
+  
+  requestAnimationFrame(() => {
+    buttonContainer.scrollLeft = scrollLeft - walk;
+  });
+});
+
+// New: Scroll to the middle when clicking a button
+const buttons = document.querySelectorAll('.button-container button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const buttonRect = button.getBoundingClientRect();
+    const containerRect = buttonContainer.getBoundingClientRect();
+    const scrollAmount = buttonRect.left + buttonRect.width / 2 - containerRect.left - containerRect.width / 2;
+    buttonContainer.scrollLeft += scrollAmount;
+
+    buttonContainer.scrollTo({
+      left: buttonContainer.scrollLeft + scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+});
+
+function resetButtonAnimation() {
+  const buttons = document.querySelectorAll('.button-container button');
+  const circles = document.querySelectorAll('.circle');
+
+  let currentActiveButton = null;
+
+  buttons.forEach((button, index) => {
+    button.addEventListener('mousedown', () => {
+      const circle = circles[index];
+      if (currentActiveButton !== button) {
+        if (currentActiveButton) {
+          const previousIndex = Array.from(buttons).indexOf(currentActiveButton);
+          const previousActiveCircle = circles[previousIndex];
+          gsap.to(previousActiveCircle, {
+            backgroundColor: "white"
+          });
+        }
+        gsap.to(circle, {
+          backgroundColor: "black"
+        });
+        currentActiveButton = button;
+      }
+    });
+  });
+}
+
+resetButtonAnimation();
+
+
