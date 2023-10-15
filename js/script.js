@@ -63,19 +63,19 @@ function loadingAnimation() {
     gsap.from(".title-container .change", {
         y: 100,
         opacity: 0,
-        delay: 0.6,
+        delay: 0.1,
         duration: 0.4
     }); 
     gsap.from(".title-container .the", {
         y: 100,
         opacity: 0,
-        delay: 0.8,
+        delay: 0.2,
         duration: 0.4
     }); 
     gsap.from(".title-container .course", {
         y: 100,
         opacity: 0,
-        delay: 1,
+        delay: 0.3,
         duration: 0.4
     });
 
@@ -89,7 +89,7 @@ function loadingAnimation() {
     gsap.from(".image-container img", {
         y:100,
         opacity:0,
-        delay: 1.2,
+        delay: 0.4,
         duration: 0.4
     });
 
@@ -97,7 +97,7 @@ function loadingAnimation() {
         scale: 0.4,
         rotate: 360,
         opacity: 0,
-        delay: 1.4,
+        delay: 0.5,
         duration: 0.4
     })
 
@@ -110,12 +110,12 @@ function loadingAnimation() {
     gsap.from(".do-good", {
       opacity: 0,
       width: 0,
-      delay: 1.2,
+      delay: .2,
       duration: 0.4,
     });
     gsap.from("#product1", {
       opacity:0,
-      delay: 1.6,
+      delay: 0.5,
       duration: 0.4,
     });
 }
@@ -168,26 +168,26 @@ function scrollTrigger(element, scale, opacity, delay, duration, y, width, rotat
     observer.observe(elementToObserve);
     }
 };
-scrollTrigger("#product1", scale=1.1, opacity=0, delay=0.2, duration=0.4);
-scrollTrigger("#product2", scale=1.1, opacity=0, delay=0.4, duration=0.4);
-scrollTrigger("#product3", scale=1.1, opacity=0, delay=0.6, duration=0.4);
-scrollTrigger("#g-products1", scale=1.1, opacity=0, delay=0.6, duration=0.4);
-scrollTrigger("#g-products2", scale=1.1, opacity=0, delay=0.8, duration=0.4);
-scrollTrigger("#g-products3", scale=1.1, opacity=0, delay=0.6, duration=0.4);
-scrollTrigger("#g-products4", scale=1.1, opacity=0, delay=0.8, duration=0.4);
-scrollTrigger("#g-products5", scale=1.1, opacity=0, delay=0.6, duration=0.4);
-scrollTrigger("#g-products6", scale=1.1, opacity=0, delay=0.8, duration=0.4);
+scrollTrigger("#product1", scale=1.1, opacity=0, delay=0.1, duration=0.4);
+scrollTrigger("#product2", scale=1.1, opacity=0, delay=0.2, duration=0.4);
+scrollTrigger("#product3", scale=1.1, opacity=0, delay=0.3, duration=0.4);
+scrollTrigger("#g-products1", scale=1.1, opacity=0, delay=0.4, duration=0.4);
+scrollTrigger("#g-products2", scale=1.1, opacity=0, delay=0.5, duration=0.4);
+scrollTrigger("#g-products3", scale=1.1, opacity=0, delay=0.4, duration=0.4);
+scrollTrigger("#g-products4", scale=1.1, opacity=0, delay=0.5, duration=0.4);
+scrollTrigger("#g-products5", scale=1.1, opacity=0, delay=0.4, duration=0.4);
+scrollTrigger("#g-products6", scale=1.1, opacity=0, delay=0.5, duration=0.4);
 scrollTrigger(".buy-good.love-support", scale=1.1, opacity=0, delay=0.4, duration=0.5, width=0);
-scrollTrigger(element=".line-1", scale=1, opacity=0, delay=0.2, duration=0.2, y=100)
-scrollTrigger(element=".line-2", scale=1, opacity=0, delay=0.3, duration=0.2, y=100)
-scrollTrigger(element=".line-3", scale=1, opacity=0, delay=0.4, duration=0.2, y=100)
-scrollTrigger(element=".line-4", scale=1, opacity=0, delay=0.5, duration=0.2, y=100)
-scrollTrigger(element=".line-5", scale=1, opacity=0, delay=0.6, duration=0.2, y=100)
-scrollTrigger(element=".impact-img1", scale=1.1, opacity=0, delay=0.2, duration=0.4, y=100)
-scrollTrigger(element=".impact-img2", scale=1.1, opacity=0, delay=0.3, duration=0.4, y=100)
-scrollTrigger(element=".email-container h3", scale=1, opacity=0, delay=0.2, duration=0.4, y=100)
-scrollTrigger(element=".email-svg-container img", scale=0, opacity=0, delay=0.3, duration=0.4, 0, 0, rotate=360)
-scrollTrigger(element=".logo-container", scale=1, opacity=0, delay=0.1, duration=0.2, y=100)
+scrollTrigger(element=".line-1", scale=1, opacity=0, delay=0.1, duration=0.2, y=100)
+scrollTrigger(element=".line-2", scale=1, opacity=0, delay=0.2, duration=0.2, y=100)
+scrollTrigger(element=".line-3", scale=1, opacity=0, delay=0.3, duration=0.2, y=100)
+scrollTrigger(element=".line-4", scale=1, opacity=0, delay=0.4, duration=0.2, y=100)
+scrollTrigger(element=".line-5", scale=1, opacity=0, delay=0.5, duration=0.2, y=100)
+scrollTrigger(element=".impact-img1", scale=1.1, opacity=0, delay=0.1, duration=0.4, y=100)
+scrollTrigger(element=".impact-img2", scale=1.1, opacity=0, delay=0.2, duration=0.4, y=100)
+scrollTrigger(element=".email-container h3", scale=1, opacity=0, delay=0.1, duration=0.4, y=100)
+scrollTrigger(element=".email-svg-container img", scale=0, opacity=0, delay=0.2, duration=0.4, 0, 0, rotate=360)
+scrollTrigger(element=".logo-container", scale=1, opacity=0, delay=0.1, duration=0.1, y=100)
 
 
 
