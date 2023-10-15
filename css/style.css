@@ -161,6 +161,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .title-container {
+        margin-top: 50vw;
+    }
+
     .image-container img{
         height: 95vw;
         width: 178vw;
@@ -922,7 +926,6 @@ scroll-behavior: auto;
     align-items: center;
     position: relative;
     top: 10vw;
-    margin-bottom: 30vw;
 }
 
 .impact-container {
@@ -956,22 +959,20 @@ scroll-behavior: auto;
     width: 130px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and  (max-width: 1024px) {
     .our-impact {
-        height: 250vw;
+        height: 120vw;
         justify-content: flex-start;
         align-items: center;
         margin-left: 2vw;
     }
 
     .grid-2x1 {
-        height: 40vw;
+        height: 50vw;
         display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 50vw);
         grid-template-areas: 
-        "impact-image-left impact-image-right"
-        "impact-content impact-content";
+        "impact-image-left impact-image-right";
         align-items: center;
         justify-items: center;
         justify-content: center;
@@ -982,29 +983,42 @@ scroll-behavior: auto;
 
     .impact-img1 {
         grid-area: impact-image-left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
 
     .impact-img1 img {
-        width: 45vw;
-        height: 100%;
+        margin-top: 40vw;
+        width: 40vw;
+        height: 40vw;
 
     }
     .impact-img2 img {
-        width: 45vw;
-        height: 100%;
+        margin-top: 40vw;
+        width: 40vw;
+        height: 40vw;
     }
 
     .impact-img2 {
         grid-area: impact-image-right;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .impact-container .impact-content{
-        grid-area: impact-content;
         display: flex;
         flex-direction: column;
-        margin-top: 0;
         justify-content: flex-start;
-        margin-left: 5vw;
+        width: 96vw;
+        height: 100vw;
+        margin-top: 10vw;
+        margin-left: 55vw;
+        position: relative;
+        top: 30vw;
     }
 
     .our-impact h3 {
@@ -1025,5 +1039,359 @@ scroll-behavior: auto;
         width: 130px;
         display: block;
     }
+}
+
+@media screen and (max-width: 490px) {
+    .our-impact {
+        height: 600px;
+    }
+
+}
+
+.email-block {
+    margin-top: 20vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.email-container {
+    padding-bottom: 1vw;
+    display: flex;
+    align-items: center;
+    width: 96vw;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.email-container h3 {
+    font-family: Futura;
+    font-size: 2.5vw;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+
+.email-svg-container {
+    position: relative;
+}
+
+.email-svg-container img{
+    width: 14vw;
+    height: 8vw;
+    position: absolute;
+    left: -32vw;
+    top: -6vw;
+}
+
+@media screen and (max-width: 540px) {
+    .email-block {
+        margin-top: -2vw;
+    }
+}
+@media screen and (min-width: 540px) and (max-width: 1024px) {
+    .email-block {
+        margin-top: -8vw;
+    }
+}
+
+footer {
+    width: 100vw;
+    margin-top: 10vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Halvetica Now Text";
+    margin-bottom: 10vw;
+}
+
+.f-container {
+    width: 96vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f-container h4 {
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: -5vw;
+    font-size: .8vw;
+    opacity: 0.6;
+}
+
+.container-connect li {
+    list-style: none;
+    line-height: 1.3vw;
+    font-size: 1vw;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.f-right  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.gritties {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container svg {
+    height: 15vw;
+    width: 15vw;
+}
+
+.term-policy-container {
+    display: flex;
+    position: relative;
+    top: 8vw;
+
+}
+
+.term-policy-container h4 {
+    margin-right: 2vw;
+}
+
+.f-middle p {
+    font-family: "Halvetica Now Text";
+    width: 65vw;
+    font-size: 1vw;
+    text-align: center;
+    position: relative;
+    top: 6vw;
+}
+
+.p-inv {
+    display: none;
+}
+
+.tp-inv {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo-container svg {
+        height: 8vw;
+        width: 8vw;
+        position: relative;
+        left: -36vw;
+        top: -27vw
+    }
+
+    .f-left {
+        width: 50vw;
+    }
+    .f-right {
+        width: 50vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-items: center;
+        top: 4vw;
+    }
+
+    .f-container .f-left h4 {
+        margin-top: 1vw;
+        font-size: 3vw;
+        white-space: nowrap;
+    }
+    .f-container .f-right h4 {
+        font-size: 3vw;
+        white-space: nowrap;
+    }
+
+    .container-connect li {
+        font-size: 4vw;
+        line-height: 6vw;
+        white-space: nowrap;
+    }
+
+    .f-container {
+        height: 50vw;
+    } 
+    
+    .f-container p {
+        display: none;
+    }
+
+    .gritties {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .term-policy-container {
+        display: none;
+    }
+
+    .p-inv {
+        display: block;
+        font-family: "Halvetica Now Text";
+        width: 96vw;
+        font-size: 4vw;
+        text-align: center;
+        position: relative;
+        right: -2vw;
+        top: -5vw
+    }
+
+    .tp-inv {
+        display: flex;
+        font-size: 2vw;
+        font-family: "Halvetica Now Text";
+        opacity: 0.7;
+        gap: 2vw;
+        margin-left: 25vw;
+    }
+}
+
+
+nav {
+    padding: 1.8vw;
+    position: fixed;
+    z-index: 1;
+    width: 97vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav svg {
+    height: 6vw;
+}
+
+.nav-left {
+    height: 7vw;
+    overflow: hidden;
+    margin-top: -1vw;
+    margin-left: -.3vw
+}
+.nav-left svg{
+    height: 7vw;
+    display: block;
+    width: 7vw;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 4vw;
+    margin-right: 1vw;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5vw;
+    text-decoration: none;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    margin-top: -.2vw;
+    background: #F7F7F7;
+    width: 8vw;
+    height: 2vw;
+    border-radius: 4vw;
+    position: relative;
+    top: -.5vw
+}
+.nav-icons i {
+    width: 1vw;
+    height: 1vw;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: "Halvetica Now Text";
+    text-transform: uppercase;
+    font-size: .8vw;
+    outline: 0;
+    color: #000;
+    font-weight: 500;
+}
+
+a:visited {
+    color: #222;
+}
+
+.nav-links a:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .5vw;
+}
+.nav-links a:nth-child(2) svg {
+    position: relative;
+    top: -2.5vw
+}
+
+@media screen and (max-width: 1024px) {
+     nav {
+        padding: 10px 20px;
+        height: 500px;
+     }
+     .nav-right .nav-links {
+        display: none;
+     }
+
+     .nav-left svg {
+        width: 80px;
+        height: 80px;
+     }
+     .nav-left svg:nth-child(2) {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        
+     }
+
+     .nav-left {
+        height: 80px;
+     }
+
+     .nav-icons {
+        position: relative;
+        top: 8px;
+        left: -10px;
+        display: flex;
+        justify-content: space-evenly;
+        height: 30px;
+        width: 80px;
+        gap: 2vw;
+     }
+     .nav-icons i {
+        height: 30px;
+        width: 30px;
+        padding-top: 3vw;
+     }
 
 }
